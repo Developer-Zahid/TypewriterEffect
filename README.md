@@ -14,10 +14,13 @@ A lightweight, customizable vanilla JavaScript class for creating typewriter-sty
 
 ## 🚀 Installation
 
-You can use the script directly via CDN or your GitHub raw URL:
+You can use the script directly via CDN:
 
 ```html
 <script src="https://developer-zahid.github.io/TypewriterEffect/script.js"></script>
+
+<!-- Minified Version -->
+<script src="https://cdn.jsdelivr.net/gh/Developer-Zahid/TypewriterEffect@latest/script.min.js"></script>
 ```
 
 ## 🔧 Usage
@@ -25,41 +28,40 @@ You can use the script directly via CDN or your GitHub raw URL:
 
 ```html
 <!-- Placeholder mode -->
-<textarea id="t1" placeholder="Loading..." required></textarea>
+<textarea id="placeholderSelector" placeholder="" required rows="5"></textarea>
 
 <!-- Text mode -->
-<div id="t2" style="font-family: monospace;"></div>
+<div id="textSelector"></div>
 ```
 
 ### 2. Initialize the effect
 
 ```js
-new TypewriterEffect('#t1', {
-  prefix: 'Ask Spell to create a ',
-  suffix: '...',
+new TypewriterEffect('#placeholderSelector', {
+  target: 'placeholder' // or 'text',
+  prefix: 'Generate ',
+  suffix: '_',
   phrases: [
-    'marketing strategy document',
-    'AP US history essay',
-    'Mother\'s Day letter'
+    'product descriptions',
+    'LinkedIn posts',
+    'funny tweets'
   ],
   typingSpeed: 90,
   deletingSpeed: 50,
   pauseBetweenWords: 2000,
-  target: 'placeholder' // or 'text'
 });
 
-new TypewriterEffect('#t2', {
+new TypewriterEffect('#textSelector', {
   prefix: 'Generate ',
-  suffix: ' ✨',
+  suffix: ' 😎',
   phrases: [
-    'fun blog intros',
-    'snappy subject lines',
-    'LinkedIn hooks'
+    'product descriptions',
+    'LinkedIn posts',
+    'funny tweets'
   ],
   typingSpeed: 70,
   deletingSpeed: 30,
   pauseBetweenWords: 1500,
-  target: 'text'
 });
 ```
 
