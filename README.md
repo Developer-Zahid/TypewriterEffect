@@ -38,7 +38,7 @@ You can use the script directly via CDN:
 
 ```js
 new TypewriterEffect('#placeholderSelector', {
-  target: 'placeholder' // or 'text',
+  target: 'placeholder', // or 'text'
   prefix: 'Generate ',
   suffix: '_',
   phrases: [
